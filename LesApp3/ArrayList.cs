@@ -12,7 +12,7 @@ namespace LesApp3
     class ArrayList
     {
         /// <summary>
-        /// масив елементів
+        /// Масив елементів
         /// </summary>
         private object[] array = new object[4];
         /// <summary>
@@ -95,12 +95,7 @@ namespace LesApp3
             // а так як передається певна кількість елементів length,
             // які необхідно доадти в масив, то рівняння прийме вигляд
             // n = ln(count + length) / ln(2)
-            // якщо count + length == capacity то в такому випадку степінь n,
-            // буде цілим числом і ємність залишиться такою як і була і неможливо додати
-            // нові об'єкти, а тому необхідно додати 1
-            // якщо ж count + length > capacity, то ми отримаємо дійсне n
-            // округливши його в напрямку + безкінечності функцією ceiling
-            // ми отримаємо ціле число n, яке вмыщатиме всі нові об'єкти
+            // якщо count + length >= capacity то міняємо розмір
             #endregion
 
             // розрахунок степіня двійки, який визначатиме ємність автопарку
@@ -139,7 +134,7 @@ namespace LesApp3
         /// <summary>
         /// Пошук індекса елемента по значенню
         /// </summary>
-        /// <param name="key"></param>
+        /// <param name="value"></param>
         /// <returns></returns>
         public int IndexOf(object value)
         {
@@ -156,7 +151,7 @@ namespace LesApp3
         }
 
         /// <summary>
-        /// Видалення елемента по певному індексу
+        /// Видалення елемента по індексу
         /// </summary>
         /// <param name="index">індекс</param>
         public void RemoveAt(int index)
