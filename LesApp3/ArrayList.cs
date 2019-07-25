@@ -120,7 +120,7 @@ namespace LesApp3
         }
 
         /// <summary>
-        /// Додавання одного авто
+        /// Додавання одного елемента
         /// </summary>
         public void Add(object value)
         {
