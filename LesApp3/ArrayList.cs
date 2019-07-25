@@ -25,9 +25,9 @@ namespace LesApp3
         public int Capacity { get { return array.Length; } }
 
         /// <summary>
-        /// Доступ до авто
+        /// Доступ до масиву
         /// </summary>
-        /// <param name="index">індекс доступу до авто</param>
+        /// <param name="index">індекс доступу до масиву</param>
         /// <returns></returns>
         public object this[int index]
         {
